@@ -31,10 +31,10 @@ let modulesId = 'login';
 
 
 // add-user  增加用户
-APP.post('/logout-user', function (req, res) {
-  var n = req.session.views || 0
-  req.session.views = n++
-  res.send(n + ' views12345')
+APP.get('/logout-user', function (req, res) {
+  // var n = req.session.views || 0
+  // req.session.views = n++
+  res.send(req.session.views + ' views12345')
 }) 
 
 module.exports= {

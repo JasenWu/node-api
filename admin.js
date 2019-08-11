@@ -1,10 +1,6 @@
 var express = require('express');
 
- 
 const formidableMiddleware = require('express-formidable');
-
-
-
 
 let GLOBAL = global;
  
