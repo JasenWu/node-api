@@ -10,6 +10,14 @@ let GLOBAL = global;
  
 GLOBAL.APP = express()
 APP.use(formidableMiddleware());
+var cookieSession = require('cookie-session')
+APP.set('trust proxy', 1) // trust first proxy
+
+APP.use(cookieSession({
+  name: 'session',
+  keys: ['key1']
+}))
+
 
 
 APP.all('*', function(req, res, next) {  
